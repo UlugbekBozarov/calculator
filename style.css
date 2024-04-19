@@ -46,6 +46,12 @@ body {
   max-width: 335px;
 }
 
+@media (min-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
 .mode {
   height: 32px;
 }
