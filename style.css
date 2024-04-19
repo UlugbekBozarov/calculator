@@ -1,0 +1,175 @@
+:root {
+  --fontFamily: "Work Sans";
+  --borderRadius: 24px;
+}
+
+[data-theme="light"] {
+  --bgColor: #f1f2f3;
+  --primaryColor: #4b5efc;
+  --primaryActiveColor: #6372ff;
+  --secondaryColor: #ffffff;
+  --secondaryActiveColor: #f9f9f9;
+  --contrastTextColor: #fff;
+  --tertiaryColor: #d2d3da;
+  --tertiaryActiveColor: #c0c1c9;
+  --textColor: #000000;
+}
+
+[data-theme="dark"] {
+  --bgColor: #17181a;
+  --primaryColor: #4b5efc;
+  --primaryActiveColor: #6372ff;
+  --secondaryColor: #2e2f38;
+  --secondaryActiveColor: #44454e;
+  --tertiaryColor: #4e505f;
+  --tertiaryActiveColor: #6b6d7c;
+  --contrastTextColor: #fff;
+  --textColor: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bgColor);
+  padding: 30px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 335px;
+}
+
+.mode {
+  height: 32px;
+}
+
+.switch-block {
+  position: relative;
+  width: 72px;
+  height: 32px;
+  display: flex;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--secondaryColor);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.switch-block .left,
+.switch-block .right {
+  width: 50%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: var(--tertiaryColor);
+  transition: all 0.3s;
+}
+
+html[data-theme="dark"] .switch-block .circle {
+  top: 4px;
+  left: 8px;
+}
+
+html[data-theme="light"] .switch-block .circle {
+  top: 4px;
+  left: 40px;
+}
+
+.screen {
+  height: calc(100vh - 524px);
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  color: var(--textColor);
+}
+
+.screen p,
+.screen h2 {
+  width: 100%;
+  font-family: var(--fontFamily);
+  font-weight: 300;
+  text-align: right;
+}
+
+.screen p {
+  font-size: 40px;
+  line-height: 47px;
+  opacity: 0.4;
+  color: inherit;
+}
+
+.screen h2 {
+  font-size: 60px;
+  line-height: 60px;
+  color: inherit;
+}
+
+.btn-block {
+  height: 432px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-block button {
+  width: calc(25% - 12px);
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fontFamily);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  border-radius: var(--borderRadius);
+  border: none;
+  padding: 12px;
+  transition: all 0.1s;
+}
+
+button.tertiary {
+  background-color: var(--tertiaryColor);
+  color: var(--textColor);
+}
+
+button.tertiary:active {
+  background-color: var(--tertiaryActiveColor);
+}
+
+button.secondary {
+  background-color: var(--secondaryColor);
+  color: var(--textColor);
+}
+
+button.secondary:active {
+  background-color: var(--secondaryActiveColor);
+}
+
+button.primary {
+  background-color: var(--primaryColor);
+  color: var(--contrastTextColor);
+}
+
+button.primary:active {
+  background-color: var(--primaryActiveColor);
+}
