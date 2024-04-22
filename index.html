@@ -17,8 +17,6 @@
       <div class="mode">
         <button
           type="button"
-          data-theme-toggle
-          aria-label="Change to light theme"
           onclick="handleChangeTheme()"
           class="switch-block"
         >
@@ -62,12 +60,12 @@
         </button>
       </div>
       <div class="screen">
-        <p>6 290÷5</p>
-        <h2>1 258</h2>
+        <p id="expression"></p>
+        <h2 id="result">0</h2>
       </div>
       <div class="btn-block">
-        <button class="tertiary">C</button>
-        <button class="tertiary">
+        <button class="tertiary" onclick="handleChangeButton('c')">C</button>
+        <button class="tertiary" onclick="handleChangeButton('abs')">
           <svg
             width="33"
             height="32"
@@ -83,38 +81,29 @@
             />
           </svg>
         </button>
-        <button class="tertiary">%</button>
-        <button class="primary">
-          <svg
-            width="33"
-            height="32"
-            viewBox="0 0 33 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M23.5821 7.5547L24.1367 6.72265L22.4726 5.61325L21.9179 6.4453L9.91795 24.4453L9.36325 25.2774L11.0273 26.3868L11.5821 25.5547L23.5821 7.5547ZM9.75 6V7V9H11.75H12.75V11H11.75H9.75V13V14H7.75V13V11H5.75H4.75V9H5.75H7.75V7V6H9.75ZM21.75 21H20.75V23H21.75H27.75H28.75V21H27.75H21.75Z"
-              fill="white"
-            />
-          </svg>
+        <button class="tertiary" onclick="handleChangeButton('%')">%</button>
+        <button class="primary" onclick="handleChangeButton('dismemberment')">
+          ÷
         </button>
-        <button class="secondary">7</button>
-        <button class="secondary">8</button>
-        <button class="secondary">9</button>
-        <button class="primary">×</button>
-        <button class="secondary">4</button>
-        <button class="secondary">5</button>
-        <button class="secondary">6</button>
-        <button class="primary">–</button>
-        <button class="secondary">1</button>
-        <button class="secondary">2</button>
-        <button class="secondary">3</button>
-        <button class="primary">+</button>
-        <button class="secondary">.</button>
-        <button class="secondary">0</button>
-        <button class="secondary">
+        <button class="secondary" onclick="handleChangeButton('7')">7</button>
+        <button class="secondary" onclick="handleChangeButton('8')">8</button>
+        <button class="secondary" onclick="handleChangeButton('9')">9</button>
+        <button class="primary" onclick="handleChangeButton('increase')">
+          ×
+        </button>
+        <button class="secondary" onclick="handleChangeButton('4')">4</button>
+        <button class="secondary" onclick="handleChangeButton('5')">5</button>
+        <button class="secondary" onclick="handleChangeButton('6')">6</button>
+        <button class="primary" onclick="handleChangeButton('subtraction')">
+          –
+        </button>
+        <button class="secondary" onclick="handleChangeButton('1')">1</button>
+        <button class="secondary" onclick="handleChangeButton('2')">2</button>
+        <button class="secondary" onclick="handleChangeButton('3')">3</button>
+        <button class="primary" onclick="handleChangeButton('add')">+</button>
+        <button class="secondary" onclick="handleChangeButton('.')">.</button>
+        <button class="secondary" onclick="handleChangeButton('0')">0</button>
+        <button class="secondary" onclick="handleChangeButton('backspace')">
           <svg
             width="33"
             height="32"
@@ -130,7 +119,9 @@
             />
           </svg>
         </button>
-        <button class="primary">=</button>
+        <button class="primary" onclick="handleChangeButton('equality')">
+          =
+        </button>
       </div>
     </div>
 

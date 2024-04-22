@@ -80,6 +80,7 @@ body {
 
 .circle {
   position: absolute;
+  top: 4px;
   width: 24px;
   height: 24px;
   border-radius: 12px;
@@ -88,13 +89,11 @@ body {
 }
 
 html[data-theme="dark"] .switch-block .circle {
-  top: 4px;
-  left: 8px;
+  left: 6px;
 }
 
 html[data-theme="light"] .switch-block .circle {
-  top: 4px;
-  left: 40px;
+  left: 42px;
 }
 
 .screen {
