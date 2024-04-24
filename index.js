@@ -39,29 +39,29 @@ function handleChangeButton(symbol) {
     case "dismemberment": {
       secondNumber = firstNumber;
       firstNumber = "0";
-      action = "/";
-      innerExpression("");
+      action = "÷";
+      innerExpression(`${secondNumber} ${action}`);
       break;
     }
     case "increase": {
       secondNumber = firstNumber;
       firstNumber = "0";
-      action = "*";
-      innerExpression("");
+      action = "×";
+      innerExpression(`${secondNumber} ${action}`);
       break;
     }
     case "subtraction": {
       secondNumber = firstNumber;
       firstNumber = "0";
       action = "-";
-      innerExpression("");
+      innerExpression(`${secondNumber} ${action}`);
       break;
     }
     case "add": {
       secondNumber = firstNumber;
       firstNumber = "0";
       action = "+";
-      innerExpression("");
+      innerExpression(`${secondNumber} ${action}`);
       break;
     }
     case "backspace": {
@@ -85,11 +85,11 @@ function handleChangeButton(symbol) {
           result = Number(secondNumber) - Number(firstNumber);
           break;
         }
-        case "*": {
+        case "×": {
           result = Number(secondNumber) * Number(firstNumber);
           break;
         }
-        case "/": {
+        case "÷": {
           result = Number(secondNumber) / Number(firstNumber);
           break;
         }
@@ -111,7 +111,6 @@ function handleChangeButton(symbol) {
         firstNumber = String(Number(firstNumber) * 10 + Number(symbol));
         innerResult(firstNumber);
       }
-      innerExpression("");
     }
   }
 }

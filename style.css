@@ -116,7 +116,7 @@ html[data-theme="light"] .switch-block .circle {
 }
 
 .screen p {
-  font-size: 40px;
+  font-size: 25px;
   line-height: 47px;
   opacity: 0.4;
   color: inherit;
@@ -157,6 +157,10 @@ button.tertiary {
   color: var(--textColor);
 }
 
+button.tertiary svg path {
+  fill: var(--textColor);
+}
+
 button.tertiary:active {
   background-color: var(--tertiaryActiveColor);
 }
@@ -164,6 +168,10 @@ button.tertiary:active {
 button.secondary {
   background-color: var(--secondaryColor);
   color: var(--textColor);
+}
+
+button.secondary svg path {
+  fill: var(--textColor);
 }
 
 button.secondary:active {
